@@ -1,0 +1,27 @@
+# ninja log v5
+4095	4108	1648423960820311160	lib/libgmock.a	cc3bf0debc9dfa2f
+4059	4095	1648423960808311859	lib/libgtest.a	1463199001fd5d70
+0	881	1648424037997702559	CMakeFiles/unitTests.dir/sample1_unittest.cc.o	1a690577c4a7abee
+1	1611	1648423958324459405	lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	a59f94f0256b9141
+881	1024	1648424038165698733	unitTests	93686905d35e979f
+1	976	1648423957688498454	CMakeFiles/unitTests.dir/main.cpp.o	799f8c4fc31f7d9b
+1	1446	1648423958156469610	lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	ecc4f5aa7c0d63d8
+1	115	1648423956824552326	CMakeFiles/unitTests.dir/sample1.cc.o	8e091c485e048cf
+4108	4112	1648423960824310928	lib/libgmock_main.a	928ca85da20f4564
+0	2	0	clean	932b39e40d338c4e
+1	2620	1648423959328398842	lib/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	b1014d3d477bf5a3
+4096	4099	1648423960812311627	lib/libgtest_main.a	fba92f52656ad380
+1	4059	1648423960768314188	lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	29525d42ced49d6c
+0	4	0	clean	932b39e40d338c4e
+1	19	1648424082377137587	CMakeFiles/unitTests.dir/sample1.cc.o	8e091c485e048cf
+1	1367	1648424083725119803	lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	ecc4f5aa7c0d63d8
+1	1368	1648424083725119803	CMakeFiles/unitTests.dir/main.cpp.o	799f8c4fc31f7d9b
+1	1541	1648424083901117474	CMakeFiles/unitTests.dir/sample1_unittest.cc.o	1a690577c4a7abee
+1	1648	1648424084009116044	lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	a59f94f0256b9141
+1	2180	1648424084537109016	lib/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	b1014d3d477bf5a3
+1	4113	1648424086465083203	lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	29525d42ced49d6c
+4113	4145	1648424086501082718	lib/libgtest.a	1463199001fd5d70
+4145	4149	1648424086509082610	lib/libgtest_main.a	fba92f52656ad380
+4145	4158	1648424086517082503	lib/libgmock.a	cc3bf0debc9dfa2f
+4158	4163	1648424086521082449	lib/libgmock_main.a	928ca85da20f4564
+4149	4286	1648424086645080780	unitTests	5eb98b89f8d5bbb9

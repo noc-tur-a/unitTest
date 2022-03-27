@@ -1,0 +1,1 @@
+/usr/bin/c++  --coverage -std=c++14 -g   CMakeFiles/unitTests.dir/main.cpp.o CMakeFiles/unitTests.dir/sample1.cc.o CMakeFiles/unitTests.dir/sample1_unittest.cc.o  -o unitTests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a -lpthread 
