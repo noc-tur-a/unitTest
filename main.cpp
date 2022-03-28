@@ -28,8 +28,20 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <cstdio>
+#include <stdio.h>
 
+#include "algorithms.h"
 #include "gtest/gtest.h"
+
+//unsigned int find(const int* a, int n, int val) {
+//    for(int i = 0; i < n; i++) {
+//        //printf("Number %d\n", a[i]);
+//        if(a[i] == val) {
+//            return i;
+//        }
+//    }
+//    return n;
+//}
 
 #if GTEST_OS_ESP8266 || GTEST_OS_ESP32
 #if GTEST_OS_ESP8266
@@ -48,6 +60,26 @@ void loop() { RUN_ALL_TESTS(); }
 GTEST_API_ int main(int argc, char **argv) {
     printf("Running main() from %s\n", __FILE__);
     testing::InitGoogleTest(&argc, argv);
+
+    int a[] = { 3, 2, 2, 5, 3, 1, 5, 1, 2 };
+
+    unsigned int ret = find(a, sizeof(a)/sizeof(int), 5);  // returns 3
+    printf("find Index: %d\n", ret);
+
+    ret = find(a, sizeof(a)/sizeof(int), 6);  // returns 9
+    printf("find Index: %d\n", ret);
+
+    ret = max_element(a, sizeof(a)/sizeof(int));
+    printf("max_element: Index: %d\n", ret);
+
+    int b = 5;
+    ret = max_element(&b, 0);
+    printf("max_element: Index: %d\n", ret);
+
+    printArray(a, sizeof(a)/sizeof(int));
+    reverse(a, (sizeof(a)/sizeof(int) -1));
+    printArray(a, sizeof(a)/sizeof(int));
+
     return RUN_ALL_TESTS();
 }
 #endif
