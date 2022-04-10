@@ -1,5 +1,5 @@
 //
-// Created by carpe on 28.03.22.
+// Created by Volker Tenta on 28.03.22.
 //
 
 #ifndef UNITTESTS_ALGORITHMS_H

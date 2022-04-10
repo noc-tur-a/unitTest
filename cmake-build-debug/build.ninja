@@ -87,20 +87,6 @@ build CMakeFiles/unitTests.dir/algorithms.cpp.o: CXX_COMPILER__unitTests_Debug /
   OBJECT_DIR = CMakeFiles/unitTests.dir
   OBJECT_FILE_DIR = CMakeFiles/unitTests.dir
 
-build CMakeFiles/unitTests.dir/sample1.cc.o: CXX_COMPILER__unitTests_Debug /home/carpe/pcloud/projects/clion/unitTest2/sample1.cc || cmake_object_order_depends_target_unitTests
-  DEP_FILE = CMakeFiles/unitTests.dir/sample1.cc.o.d
-  FLAGS = -std=c++14 -g -std=gnu++14
-  INCLUDES = -I/home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googlemock/include -isystem /home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googletest/include -isystem /home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googletest
-  OBJECT_DIR = CMakeFiles/unitTests.dir
-  OBJECT_FILE_DIR = CMakeFiles/unitTests.dir
-
-build CMakeFiles/unitTests.dir/sample1_unittest.cc.o: CXX_COMPILER__unitTests_Debug /home/carpe/pcloud/projects/clion/unitTest2/sample1_unittest.cc || cmake_object_order_depends_target_unitTests
-  DEP_FILE = CMakeFiles/unitTests.dir/sample1_unittest.cc.o.d
-  FLAGS = -std=c++14 -g -std=gnu++14
-  INCLUDES = -I/home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googlemock/include -isystem /home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googletest/include -isystem /home/carpe/pcloud/projects/clion/unitTest2/lib/googletest-main/googletest
-  OBJECT_DIR = CMakeFiles/unitTests.dir
-  OBJECT_FILE_DIR = CMakeFiles/unitTests.dir
-
 build CMakeFiles/unitTests.dir/algorithms_unittest.cpp.o: CXX_COMPILER__unitTests_Debug /home/carpe/pcloud/projects/clion/unitTest2/algorithms_unittest.cpp || cmake_object_order_depends_target_unitTests
   DEP_FILE = CMakeFiles/unitTests.dir/algorithms_unittest.cpp.o.d
   FLAGS = -std=c++14 -g -std=gnu++14
@@ -116,7 +102,7 @@ build CMakeFiles/unitTests.dir/algorithms_unittest.cpp.o: CXX_COMPILER__unitTest
 #############################################
 # Link the executable unitTests
 
-build unitTests: CXX_EXECUTABLE_LINKER__unitTests_Debug CMakeFiles/unitTests.dir/main.cpp.o CMakeFiles/unitTests.dir/algorithms.cpp.o CMakeFiles/unitTests.dir/sample1.cc.o CMakeFiles/unitTests.dir/sample1_unittest.cc.o CMakeFiles/unitTests.dir/algorithms_unittest.cpp.o | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build unitTests: CXX_EXECUTABLE_LINKER__unitTests_Debug CMakeFiles/unitTests.dir/main.cpp.o CMakeFiles/unitTests.dir/algorithms.cpp.o CMakeFiles/unitTests.dir/algorithms_unittest.cpp.o | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -std=c++14 -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lpthread
   OBJECT_DIR = CMakeFiles/unitTests.dir
