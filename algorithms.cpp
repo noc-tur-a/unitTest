@@ -23,13 +23,6 @@ unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
     return result;
 }
 
-//TODO
-// Write a function max_element() that finds the largest element in the range a[0..n-1].
-// More precisely, it returns the unique valid index i such that:
-// for each index k with 0 <= k < n the condition a[k] <= a[i] holds and
-// for each index k with 0 <= k < i the condition a[k] < a[i] holds.
-// The return value of max_element() is n if and only if there is no maximum, which can only occur if n == 0.
-
 /**
  * @brief finds the element with the maximum value
  * @param arr pointer to array
