@@ -5,12 +5,12 @@
 #ifndef UNITTESTS_ALGORITHMS_H
 #define UNITTESTS_ALGORITHMS_H
 
-unsigned int find(const int* a, int n, int val);
+unsigned int find(const int* arr, int arrayLength, int searchedNumber);
 
-unsigned int max_element(const int* a, unsigned int n);
+unsigned int max_element(const int* arr, unsigned int arrayLength);
 
-void reverse(int* a, int n);
+void reverse(int* arr, int arrayLength);
 
-void printArray(int* a, int size);
+void printArray(int* a, int arrayLength);
 
 #endif //UNITTESTS_ALGORITHMS_H

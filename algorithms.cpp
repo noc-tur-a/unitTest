@@ -1,16 +1,26 @@
 //
-// Created by carpe on 28.03.22.
+// Created by Volker Tenta on 28.03.22.
 //
 #include <stdio.h>
 #include "algorithms.h"
 
-unsigned int find(const int* a, int n, int val) {
-    for(int i = 0; i < n; i++) {
-        if(a[i] == val) {
-            return i;
+/**
+ * @brief Finds an element in an array
+ * @param arr pointer to the array
+ * @param arrayLength the length of the array
+ * @param searchedNumber the number to be searched for
+ * @return returns the index of the element if found, otherwise returns the array Length
+ */
+unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
+    int result = arrayLength;
+
+    for(int i = 0; i < arrayLength; i++) {
+        if(arr[i] == searchedNumber) {
+            result = i;
+            break;
         }
     }
-    return n;
+    return result;
 }
 
 //TODO
@@ -20,16 +30,22 @@ unsigned int find(const int* a, int n, int val) {
 // for each index k with 0 <= k < i the condition a[k] < a[i] holds.
 // The return value of max_element() is n if and only if there is no maximum, which can only occur if n == 0.
 
-unsigned int max_element(const int* a, unsigned int n) {
+/**
+ * @brief finds the element with the maximum value
+ * @param arr pointer to array
+ * @param arrayLength the length of the afrray
+ * @return the index of the first found element that has the maximum value, otherwise 0.
+ */
+unsigned int max_element(const int* arr, unsigned int arrayLength) {
 
-    if(n == 0) {return n;}
+    if(arrayLength == 0) {return arrayLength;}
 
-    int max = a[0];
+    int max = arr[0];
     int maxIndex = 0;
 
-    for (int i = 1; i < n; i++) {
-        if (a[i] > max) {
-            max = a[i];
+    for (int i = 1; i < arrayLength; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
             maxIndex = i;
         }
     }
@@ -38,21 +54,41 @@ unsigned int max_element(const int* a, unsigned int n) {
 
 }
 
-void reverse(int* a, int n) {
+/**
+ * @brief reverses an arr
+ * @param arr pointer to the array
+ * @param arrayLength the length of the array
+ */
+void reverse(int* arr, int arrayLength) {
     int temp;
     int start = 0;
-    while (start < n) {
-        temp = a[start];
-        a[start] = a[n];
-        a[n] = temp;
+    int lastIndex = arrayLength - 1;
+
+    while (start < lastIndex) {
+        temp = arr[start];
+        arr[start] = arr[lastIndex];
+        arr[lastIndex] = temp;
         start++;
-        n--;
+        lastIndex--;
     }
 
 }
 
-void printArray(int* a, int size) {
-    for (int i = 0; i < size; i++) {
+/**
+ * @brief Helper function that prints the indices of the array in the first row
+ *        and in the second row it prints the elements of the array
+ * @param a int pointer to the array
+ * @param arrayLength int: the length of the array
+ */
+void printArray(int* a, int arrayLength) {
+
+    printf("Index: ");
+    for (int i = 0; i < arrayLength; i++) {
+        printf("%d ", i);
+    }
+
+    printf("\nArray: ");
+    for (int i = 0; i < arrayLength; i++) {
         printf("%d ", a[i]);
     }
 
