@@ -4,12 +4,14 @@
 
 #ifndef UNITTESTS_ALGORITHMS_H
 #define UNITTESTS_ALGORITHMS_H
+#include <cstdint>
 
-unsigned int find(const int* arr, unsigned int arrayLength, int searchedNumber);
 
-unsigned int max_element(const int* arr, unsigned int arrayLength);
+uint32_t find(const int32_t* arr, uint32_t arrayLength, int32_t searchedNumber);
 
-void reverse(int* arr, int arrayLength);
+uint32_t maxElement(const int32_t* arr, uint32_t arrayLength);
+
+void reverse(int32_t* arr, uint32_t arrayLength);
 
 void printArray(int* a, int arrayLength);
 

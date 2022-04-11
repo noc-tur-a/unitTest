@@ -6688,7 +6688,7 @@ branch  3 never executed
         -: 5729:  template<typename _ForwardIterator, typename _Compare>
         -: 5730:    _GLIBCXX14_CONSTEXPR
         -: 5731:    inline _ForwardIterator
-        -: 5732:    max_element(_ForwardIterator __first, _ForwardIterator __last,
+        -: 5732:    maxElement(_ForwardIterator __first, _ForwardIterator __last,
         -: 5733:		_Compare __comp)
         -: 5734:    {
         -: 5735:      // concept requirements

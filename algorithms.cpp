@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <cstdlib>
+#include <cstdint>
 #include "algorithms.h"
 
 /**
@@ -12,13 +13,13 @@
  * @param searchedNumber the number to be searched for
  * @return returns the index of the element if found, otherwise returns the array Length
  */
-unsigned int find(const int* arr, unsigned int arrayLength, int searchedNumber) {
+uint32_t find(const int32_t* arr, uint32_t arrayLength, int32_t searchedNumber) {
 
     if(!arr) { nullPointerDetectedExitWithError(); }
 
-    unsigned int result = arrayLength;
+    uint32_t result = arrayLength;
 
-    for(unsigned int i = 0; i < arrayLength; i++) {
+    for(uint32_t i = 0; i < arrayLength; i++) {
         if(arr[i] == searchedNumber) {
             result = i;
             break;
@@ -30,19 +31,18 @@ unsigned int find(const int* arr, unsigned int arrayLength, int searchedNumber) 
 /**
  * @brief finds the element with the maximum value
  * @param arr pointer to array
- * @param arrayLength the length of the afrray
+ * @param arrayLength the length of the array
  * @return the index of the first found element that has the maximum value, otherwise 0.
  */
-unsigned int max_element(const int* arr, unsigned int arrayLength) {
+uint32_t maxElement(const int32_t* arr, uint32_t arrayLength) {
 
     if(!arr) { nullPointerDetectedExitWithError(); }
-
     if(arrayLength == 0) {return arrayLength;}
 
-    int max = arr[0];
-    unsigned int maxIndex = 0;
+    int32_t max = arr[0];
+    uint32_t maxIndex = 0;
 
-    for (int i = 1; i < arrayLength; i++) {
+    for (uint32_t i = 1; i < arrayLength; i++) {
         if (arr[i] > max) {
             max = arr[i];
             maxIndex = i;
@@ -58,20 +58,16 @@ unsigned int max_element(const int* arr, unsigned int arrayLength) {
  * @param arr pointer to the array
  * @param arrayLength the length of the array
  */
-void reverse(int* arr, int arrayLength) {
+void reverse(int32_t* arr, uint32_t arrayLength) {
 
     if(!arr) { nullPointerDetectedExitWithError(); }
 
-    int temp;
-    int start = 0;
-    int lastIndex = arrayLength - 1;
+    int32_t temp;
 
-    while (start < lastIndex) {
-        temp = arr[start];
-        arr[start] = arr[lastIndex];
+    for(uint32_t startIndex = 0, lastIndex = arrayLength - 1; startIndex < lastIndex; startIndex++, lastIndex--) {
+        temp = arr[startIndex];
+        arr[startIndex] = arr[lastIndex];
         arr[lastIndex] = temp;
-        start++;
-        lastIndex--;
     }
 
 }
