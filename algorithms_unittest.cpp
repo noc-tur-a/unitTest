@@ -85,14 +85,32 @@ namespace {
     // Test for the maxElement function ********************************************************************************
     TEST(reverseTest, reverse) {
         int arr_5[] ={1, 2, 3, 4};
-        int expectedResultArray[] = {4, 3, 2, 1};
+        int expectedResultArray_5[] = {4, 3, 2, 1};
 
         printArray(arr_5, sizeof(arr_5) / sizeof(int));
         reverse(arr_5, sizeof(arr_5) / sizeof(int));
         printf("Reversed Array******************************\n");
         printArray(arr_5, sizeof(arr_5) / sizeof(int));
 
-        EXPECT_THAT(arr_5, testing::ElementsAreArray(expectedResultArray));
+        EXPECT_THAT(arr_5, testing::ElementsAreArray(expectedResultArray_5));
+
+        int arr_6[] ={1, 2, 3, 4, 5};
+        int expectedResultArray_6[] = {5, 4, 3, 2, 1};
+
+        printArray(arr_6, sizeof(arr_6) / sizeof(int));
+        reverse(arr_6, sizeof(arr_6) / sizeof(int));
+        printf("Reversed Array******************************\n");
+        printArray(arr_6, sizeof(arr_6) / sizeof(int));
+        EXPECT_THAT(arr_6, testing::ElementsAreArray(expectedResultArray_6));
+
+        int arr_7[] ={7};
+        int expectedResultArray_7[] = {7};
+
+        printArray(arr_7, sizeof(arr_7) / sizeof(int));
+        reverse(arr_7, sizeof(arr_7) / sizeof(int));
+        printf("Reversed Array******************************\n");
+        printArray(arr_7, sizeof(arr_7) / sizeof(int));
+        EXPECT_THAT(arr_7, testing::ElementsAreArray(expectedResultArray_7));
 
     }
 

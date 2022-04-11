@@ -12,6 +12,7 @@
  * @return returns the index of the element if found, otherwise returns the array Length
  */
 unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
+//TODO check null pointer
     int result = arrayLength;
 
     for(int i = 0; i < arrayLength; i++) {
@@ -31,6 +32,7 @@ unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
  */
 unsigned int max_element(const int* arr, unsigned int arrayLength) {
 
+    //TODO check null pointer
     if(arrayLength == 0) {return arrayLength;}
 
     int max = arr[0];
@@ -53,6 +55,7 @@ unsigned int max_element(const int* arr, unsigned int arrayLength) {
  * @param arrayLength the length of the array
  */
 void reverse(int* arr, int arrayLength) {
+//TODO check null pointer
     int temp;
     int start = 0;
     int lastIndex = arrayLength - 1;
