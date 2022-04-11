@@ -2,6 +2,7 @@
 // Created by Volker Tenta on 28.03.22.
 //
 #include <stdio.h>
+#include <cstdlib>
 #include "algorithms.h"
 
 /**
@@ -11,11 +12,13 @@
  * @param searchedNumber the number to be searched for
  * @return returns the index of the element if found, otherwise returns the array Length
  */
-unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
-//TODO check null pointer
-    int result = arrayLength;
+unsigned int find(const int* arr, unsigned int arrayLength, int searchedNumber) {
 
-    for(int i = 0; i < arrayLength; i++) {
+    if(!arr) { nullPointerDetectedExitWithError(); }
+
+    unsigned int result = arrayLength;
+
+    for(unsigned int i = 0; i < arrayLength; i++) {
         if(arr[i] == searchedNumber) {
             result = i;
             break;
@@ -32,11 +35,12 @@ unsigned int find(const int* arr, int arrayLength, int searchedNumber) {
  */
 unsigned int max_element(const int* arr, unsigned int arrayLength) {
 
-    //TODO check null pointer
+    if(!arr) { nullPointerDetectedExitWithError(); }
+
     if(arrayLength == 0) {return arrayLength;}
 
     int max = arr[0];
-    int maxIndex = 0;
+    unsigned int maxIndex = 0;
 
     for (int i = 1; i < arrayLength; i++) {
         if (arr[i] > max) {
@@ -55,7 +59,9 @@ unsigned int max_element(const int* arr, unsigned int arrayLength) {
  * @param arrayLength the length of the array
  */
 void reverse(int* arr, int arrayLength) {
-//TODO check null pointer
+
+    if(!arr) { nullPointerDetectedExitWithError(); }
+
     int temp;
     int start = 0;
     int lastIndex = arrayLength - 1;
@@ -76,7 +82,9 @@ void reverse(int* arr, int arrayLength) {
  * @param a int pointer to the array
  * @param arrayLength int: the length of the array
  */
-void printArray(int* a, int arrayLength) {
+void printArray(int* arr, int arrayLength) {
+
+    if(!arr) { nullPointerDetectedExitWithError(); }
 
     printf("Index: ");
     for (int i = 0; i < arrayLength; i++) {
@@ -85,8 +93,16 @@ void printArray(int* a, int arrayLength) {
 
     printf("\nArray: ");
     for (int i = 0; i < arrayLength; i++) {
-        printf("%d ", a[i]);
+        printf("%d ", arr[i]);
     }
 
     printf("\n");
+}
+
+/**
+ * @brief: helper function, prints error message and exits program wir EXIT_FAILURE
+ */
+void nullPointerDetectedExitWithError() {
+    printf("ERROR: Null Pointer referenced. Exiting...\n");
+    exit(EXIT_FAILURE);
 }

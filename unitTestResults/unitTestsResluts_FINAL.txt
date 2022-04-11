@@ -1,0 +1,21 @@
+Running main() from /home/carpe/pcloud/projects/clion/unitTest2/main.cpp
+[==========] Running 3 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from findTest
+[ RUN      ] findTest.matchIndex
+[       OK ] findTest.matchIndex (0 ms)
+[----------] 1 test from findTest (0 ms total)
+
+[----------] 1 test from maxElementTest
+[ RUN      ] maxElementTest.matchIndex
+[       OK ] maxElementTest.matchIndex (0 ms)
+[----------] 1 test from maxElementTest (0 ms total)
+
+[----------] 1 test from reverseTest
+[ RUN      ] reverseTest.reverse
+[       OK ] reverseTest.reverse (0 ms)
+[----------] 1 test from reverseTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 3 test suites ran. (0 ms total)
+[  PASSED  ] 3 tests.
