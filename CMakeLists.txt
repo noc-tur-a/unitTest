@@ -12,7 +12,7 @@ include_directories(lib/googletest-main/googletest/include)
 include_directories(lib/googletest-main/googlemock/include)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-set(SOURCE_FILES main.cpp algorithms.cpp algorithms.h maxElementUnitTest.cpp findUnitTest.cpp reverseUnitTest.cpp)
+set(SOURCE_FILES main.cpp algorithms.cpp algorithms.h maxElementUnitTest.cpp reverseUnitTest.cpp findUnitTest.cpp)
 
 add_executable(unitTests ${SOURCE_FILES})
 target_link_libraries(unitTests gtest gtest_main)

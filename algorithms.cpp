@@ -62,6 +62,9 @@ void reverse(int32_t* arr, uint32_t arrayLength) {
 
     if(!arr) { nullPointerDetectedExitWithError(); }
 
+    //check if arrayLength is zero or negative
+    if(arrayLength <= 0) { return; }
+
     int32_t temp;
 
     for(uint32_t startIndex = 0, lastIndex = arrayLength - 1; startIndex < lastIndex; startIndex++, lastIndex--) {
@@ -78,17 +81,17 @@ void reverse(int32_t* arr, uint32_t arrayLength) {
  * @param a int pointer to the array
  * @param arrayLength int: the length of the array
  */
-void printArray(int* arr, int arrayLength) {
+void printArray(int32_t* arr, int32_t arrayLength) {
 
     if(!arr) { nullPointerDetectedExitWithError(); }
 
     printf("Index: ");
-    for (int i = 0; i < arrayLength; i++) {
+    for (int32_t i = 0; i < arrayLength; i++) {
         printf("%d ", i);
     }
 
     printf("\nArray: ");
-    for (int i = 0; i < arrayLength; i++) {
+    for (int32_t i = 0; i < arrayLength; i++) {
         printf("%d ", arr[i]);
     }
 

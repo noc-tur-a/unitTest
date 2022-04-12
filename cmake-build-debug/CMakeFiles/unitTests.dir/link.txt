@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14 -g   CMakeFiles/unitTests.dir/main.cpp.o CMakeFiles/unitTests.dir/algorithms.cpp.o CMakeFiles/unitTests.dir/maxElementUnitTest.cpp.o CMakeFiles/unitTests.dir/reverseUnitTest.cpp.o CMakeFiles/unitTests.dir/findUnitTest.cpp.o  -o unitTests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a -lpthread 

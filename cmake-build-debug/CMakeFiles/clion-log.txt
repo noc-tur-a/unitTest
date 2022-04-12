@@ -1,4 +1,4 @@
-/home/carpe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/carpe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/ninja/linux/ninja -G Ninja /home/carpe/pcloud/projects/clion/unitTest2
+C:\Windows\system32\wsl.exe --distribution Ubuntu-20.04 --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/pcloud/projects/clion/unitTest2/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/d/pcloud/projects/clion/unitTest2; exitcode=$?; sleep 0.001; (exit $exitcode)"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/carpe/pcloud/projects/clion/unitTest2/cmake-build-debug
+-- Build files have been written to: /mnt/d/pcloud/projects/clion/unitTest2/cmake-build-debug

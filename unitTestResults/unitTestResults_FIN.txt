@@ -1,0 +1,153 @@
+Running main() from /mnt/d/pcloud/projects/clion/unitTest2/main.cpp
+[==========] Running 34 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 13 tests from maxElementTest
+[ RUN      ] maxElementTest.wrong_type_casting
+/mnt/d/pcloud/projects/clion/unitTest2/maxElementUnitTest.cpp:14: Failure
+Expected equality of these values:
+  1
+  maxElement(arr, sizeof(arr) / sizeof(int32_t))
+    Which is: 0
+Fails: horrible type casting
+[  FAILED  ] maxElementTest.wrong_type_casting (0 ms)
+[ RUN      ] maxElementTest.min_max_integer
+[       OK ] maxElementTest.min_max_integer (0 ms)
+[ RUN      ] maxElementTest.max_overflow
+/mnt/d/pcloud/projects/clion/unitTest2/maxElementUnitTest.cpp:24: Failure
+Expected equality of these values:
+  1
+  maxElement(arr, sizeof(arr) / sizeof(int32_t))
+    Which is: 0
+Fails: max integer overflow
+[  FAILED  ] maxElementTest.max_overflow (0 ms)
+[ RUN      ] maxElementTest.min_underflow
+/mnt/d/pcloud/projects/clion/unitTest2/maxElementUnitTest.cpp:29: Failure
+Expected equality of these values:
+  0
+  maxElement(arr, sizeof(arr) / sizeof(int32_t))
+    Which is: 1
+Fails: min integer overflow
+[  FAILED  ] maxElementTest.min_underflow (0 ms)
+[ RUN      ] maxElementTest.array_is_empty
+[       OK ] maxElementTest.array_is_empty (0 ms)
+[ RUN      ] maxElementTest.arrayLength_is_0
+[       OK ] maxElementTest.arrayLength_is_0 (0 ms)
+[ RUN      ] maxElementTest.arrayLength_short
+/mnt/d/pcloud/projects/clion/unitTest2/maxElementUnitTest.cpp:46: Failure
+Expected equality of these values:
+  5
+  maxElement(arr, 5)
+    Which is: 4
+Fails: expected 5 but arrayLength is too short
+[  FAILED  ] maxElementTest.arrayLength_short (0 ms)
+[ RUN      ] maxElementTest.arrayLength_long
+[       OK ] maxElementTest.arrayLength_long (31 ms)
+[ RUN      ] maxElementTest.null_pointer
+ERROR: Null Pointer referenced. Exiting...
+[       OK ] maxElementTest.null_pointer (3 ms)
+[ RUN      ] maxElementTest.matchIndex_1
+[       OK ] maxElementTest.matchIndex_1 (0 ms)
+[ RUN      ] maxElementTest.matchIndex_2
+[       OK ] maxElementTest.matchIndex_2 (0 ms)
+[ RUN      ] maxElementTest.matchIndex_3
+[       OK ] maxElementTest.matchIndex_3 (0 ms)
+[ RUN      ] maxElementTest.matchIndex_4
+[       OK ] maxElementTest.matchIndex_4 (0 ms)
+[----------] 13 tests from maxElementTest (35 ms total)
+
+[----------] 10 tests from reverseTest
+[ RUN      ] reverseTest.reverse_1
+[       OK ] reverseTest.reverse_1 (0 ms)
+[ RUN      ] reverseTest.reverse_2
+[       OK ] reverseTest.reverse_2 (0 ms)
+[ RUN      ] reverseTest.reverse_3
+[       OK ] reverseTest.reverse_3 (0 ms)
+[ RUN      ] reverseTest.reverse_4
+[       OK ] reverseTest.reverse_4 (0 ms)
+[ RUN      ] reverseTest.reverse_empty
+[       OK ] reverseTest.reverse_empty (0 ms)
+[ RUN      ] reverseTest.reverse_arrayLength_short
+/mnt/d/pcloud/projects/clion/unitTest2/reverseUnitTest.cpp:56: Failure
+Value of: arr
+Expected: has 4 elements where
+element #0 is equal to 4,
+element #1 is equal to 3,
+element #2 is equal to 2,
+element #3 is equal to 1
+  Actual: { 2, 1, 3, 4 } (of type int [4]), whose element #0 doesn't match
+Fails: array length is to short
+[  FAILED  ] reverseTest.reverse_arrayLength_short (0 ms)
+[ RUN      ] reverseTest.reverse_arrayLength_is_0
+/mnt/d/pcloud/projects/clion/unitTest2/reverseUnitTest.cpp:64: Failure
+Value of: arr
+Expected: has 4 elements where
+element #0 is equal to 4,
+element #1 is equal to 3,
+element #2 is equal to 2,
+element #3 is equal to 1
+  Actual: { 1, 2, 3, 4 } (of type int [4]), whose element #0 doesn't match
+Fails: array length is 0
+[  FAILED  ] reverseTest.reverse_arrayLength_is_0 (0 ms)
+[ RUN      ] reverseTest.reverse_arrayLength_is_negative
+[       OK ] reverseTest.reverse_arrayLength_is_negative (4 ms)
+[ RUN      ] reverseTest.reverse_arrayLength_long
+[       OK ] reverseTest.reverse_arrayLength_long (3 ms)
+[ RUN      ] reverseTest.null_pointer
+ERROR: Null Pointer referenced. Exiting...
+[       OK ] reverseTest.null_pointer (3 ms)
+[----------] 10 tests from reverseTest (11 ms total)
+
+[----------] 11 tests from findTest
+[ RUN      ] findTest.arrayLength_negative_arrayLength
+[       OK ] findTest.arrayLength_negative_arrayLength (3 ms)
+[ RUN      ] findTest.arrayLength_is_0
+/mnt/d/pcloud/projects/clion/unitTest2/findUnitTest.cpp:17: Failure
+Expected equality of these values:
+  sizeof(arr)/sizeof(int32_t)
+    Which is: 9
+  find(arr, 0, 6)
+    Which is: 0
+Fails: arrayLength is 0
+[  FAILED  ] findTest.arrayLength_is_0 (0 ms)
+[ RUN      ] findTest.arrayLength_long
+[       OK ] findTest.arrayLength_long (3 ms)
+[ RUN      ] findTest.arrayLength_short
+/mnt/d/pcloud/projects/clion/unitTest2/findUnitTest.cpp:28: Failure
+Expected equality of these values:
+  sizeof(arr) / sizeof(int32_t)
+    Which is: 9
+  find(arr, 8, 6)
+    Which is: 8
+Fails: arrayLength too short (8)
+[  FAILED  ] findTest.arrayLength_short (0 ms)
+[ RUN      ] findTest.arrayLength_empty_array
+[       OK ] findTest.arrayLength_empty_array (0 ms)
+[ RUN      ] findTest.null_pointer
+ERROR: Null Pointer referenced. Exiting...
+[       OK ] findTest.null_pointer (3 ms)
+[ RUN      ] findTest.matchIndex_1
+[       OK ] findTest.matchIndex_1 (0 ms)
+[ RUN      ] findTest.matchIndex_2
+[       OK ] findTest.matchIndex_2 (0 ms)
+[ RUN      ] findTest.matchIndex_3
+[       OK ] findTest.matchIndex_3 (0 ms)
+[ RUN      ] findTest.matchIndex_4
+[       OK ] findTest.matchIndex_4 (0 ms)
+[ RUN      ] findTest.matchIndex_5
+[       OK ] findTest.matchIndex_5 (0 ms)
+[----------] 11 tests from findTest (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 34 tests from 3 test suites ran. (58 ms total)
+[  PASSED  ] 26 tests.
+[  FAILED  ] 8 tests, listed below:
+[  FAILED  ] maxElementTest.wrong_type_casting
+[  FAILED  ] maxElementTest.max_overflow
+[  FAILED  ] maxElementTest.min_underflow
+[  FAILED  ] maxElementTest.arrayLength_short
+[  FAILED  ] reverseTest.reverse_arrayLength_short
+[  FAILED  ] reverseTest.reverse_arrayLength_is_0
+[  FAILED  ] findTest.arrayLength_is_0
+[  FAILED  ] findTest.arrayLength_short
+
+ 8 FAILED TESTS
