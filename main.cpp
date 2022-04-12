@@ -2,7 +2,7 @@
 // Created by Volker Tenta on 28.03.22.
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include "gtest/gtest.h"
 
 

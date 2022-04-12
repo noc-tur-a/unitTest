@@ -4,7 +4,7 @@
 
 #include "algorithms.h"
 #include "gtest/gtest.h"
-#include "gmock/gmock.h"
+
 
 namespace {
 
@@ -48,19 +48,19 @@ namespace {
         //maxElementTest 1**********************************************************************************
         int32_t arr[] = { 3, 2, 2, 5, 3, 1, 5, 1, 2 };
         expectedResult = 3;
-        result = maxElement(arr, sizeof(arr) / sizeof(int));
+        result = maxElement(arr, sizeof(arr) / sizeof(int32_t));
         EXPECT_EQ(expectedResult, result);
 
         //maxElementTest 2**********************************************************************************
         int arr_2[] = {3, 3, 3, 3, 3 };
         expectedResult = 0;
-        result = maxElement(arr_2, sizeof(arr_2) / sizeof(int));
+        result = maxElement(arr_2, sizeof(arr_2) / sizeof(int32_t));
         EXPECT_EQ(expectedResult, result);
 
         //maxElementTest 3**********************************************************************************
         int arr_3[] = {6};
         expectedResult = 0;
-        result = maxElement(arr_3, sizeof(arr_3) / sizeof(int));
+        result = maxElement(arr_3, sizeof(arr_3) / sizeof(int32_t));
         EXPECT_EQ(expectedResult, result);
 
         //maxElementTest 4**********************************************************************************
@@ -73,7 +73,7 @@ namespace {
         //maxElementTest 5**********************************************************************************
         int arr_neg[] = {-6, -9, -4, -3, -2, -2, -1};
         expectedResult = 6;
-        result = maxElement(arr_neg, sizeof(arr_neg) / sizeof(int));
+        result = maxElement(arr_neg, sizeof(arr_neg) / sizeof(int32_t));
         EXPECT_EQ(expectedResult, result);
 
     }

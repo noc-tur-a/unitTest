@@ -3,75 +3,70 @@
 //
 #include "algorithms.h"
 #include "gtest/gtest.h"
-#include "gmock/gmock.h"
 
 namespace {
 
-
-    int32_t searchedNumber = 0;
-    uint32_t result = 0;
-    uint32_t expectedResult = 0;
-
-    //TODO Boundary Tests
-    TEST (findTest, boundary) {
-        int32_t arr[] = {};
-        printf("sizeof(arr) / sizeof(int32_t) %lu\n", sizeof(arr) / sizeof(int32_t));
-        EXPECT_EQ(sizeof(arr) / sizeof(int32_t), find(arr, sizeof(arr) / sizeof(int32_t), 9)) << "Array length = 0";
-    }
-
-    TEST (findTest, boundary2) {
-        int32_t arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        EXPECT_EQ(sizeof(arr) / sizeof(int32_t), find(arr, 11, 11)) << "Exceeding array length 9";
-    }
-
-    TEST (findTest, boundary3) {
-        int32_t arr[] = { 1,2,3,4,5,6,7,8,9};
-        EXPECT_EQ(sizeof(arr)/sizeof(int32_t), find(arr, -5, 11)) << "Giving negative array length";
-    }
-
-    TEST (findTest, boundary4) {
-        int32_t arr[] = { 1,2,3,4,5,6,7,8,9};
-        EXPECT_EQ(sizeof(arr)/sizeof(int32_t), find(arr, 0, 11));
-    }
-
-
-
-// Test for the find function **************************************************************************************
-    TEST(findTest, matchIndex) {
-
-
-//matchIndex) 1****************************************************************************************
+    TEST (findTest, arrayLength_negative_arrayLength) {
         int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
-        searchedNumber = 5;
-        expectedResult = 3;
-        result = find(arr, sizeof(arr) / sizeof(int32_t), searchedNumber);
-        EXPECT_EQ(expectedResult, result);
-
-//matchIndex) 2****************************************************************************************
-        searchedNumber = 6;
-        expectedResult = 9;
-        result = find(arr, sizeof(arr) / sizeof(int32_t), searchedNumber);
-        EXPECT_EQ(expectedResult, result);
-
-//matchIndex) 3****************************************************************************************
-        searchedNumber = 3;
-        expectedResult = 0;
-        result = find(arr, sizeof(arr) / sizeof(int32_t), searchedNumber);
-        EXPECT_EQ(expectedResult, result);
-
-//matchIndex) 4****************************************************************************************
-        searchedNumber = 2;
-        expectedResult = 1;
-        result = find(arr, sizeof(arr) / sizeof(int32_t), searchedNumber);
-        EXPECT_EQ(expectedResult, result);
-
-//matchIndex) 5****************************************************************************************
-        int arr_findNeg[] = {3, 2, 2, -5, -5, -1, 5, -1, 2};
-        searchedNumber = -5;
-        expectedResult = 3;
-        result = find(arr_findNeg, sizeof(arr_findNeg) / sizeof(int32_t), searchedNumber);
-        EXPECT_EQ(expectedResult, result);
-
-
+        EXPECT_EQ(sizeof(arr)/sizeof(int32_t), find(arr, -10, 6)) << "Fails: negative arrayLength";
     }
+
+    TEST (findTest, arrayLength_arrayLength_is_0) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(sizeof(arr)/sizeof(int32_t), find(arr, 0, 6)) << "Fails: arrayLength is 0";
+    }
+
+    TEST (findTest, arrayLength_arrayLength_long) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(sizeof(arr) / sizeof(int32_t), find(arr, 20, 6)) << "Fails: arrayLength too long (20)";
+    }
+
+    TEST (findTest, arrayLength_arrayLength_short) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(sizeof(arr) / sizeof(int32_t), find(arr, 8, 6)) << "Fails: arrayLength too short (8)";
+    }
+
+    TEST (findTest, arrayLength_empty_array) {
+        int32_t arr[] = {NULL};
+        EXPECT_EQ(sizeof(arr) / sizeof(int32_t), find(arr, sizeof(arr) / sizeof(int32_t), 6)) << "Empty Array";
+    }
+
+    //NOTE: USING a nullptr in the find function will terminate testing because function would exit program with EXIT_FAILURE
+    /*
+    TEST (findTest, arrayLength_6) {
+        int32_t arr[] = { 1,2,3,4,5,6,7,8,9};
+        EXPECT_EQ(sizeof(arr)/sizeof(int32_t), find(nullptr, sizeof(arr)/sizeof(int32_t), 11));
+    }*/
+
+// Test match indices **************************************************************************************************
+
+    //matchIndex 1****************************************************************************************
+    TEST(findTest, matchIndex_1) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(3, find(arr, sizeof(arr) / sizeof(int32_t), 5));
+    }
+
+    //matchIndex 2****************************************************************************************
+    TEST(findTest, matchIndex_2) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(9, find(arr, sizeof(arr) / sizeof(int32_t), 6));
+    }
+
+    //matchIndex 3****************************************************************************************
+    TEST(findTest, matchIndex_3) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(0, find(arr, sizeof(arr) / sizeof(int32_t), 3));
+    }
+
+    //matchIndex 4****************************************************************************************
+    TEST(findTest, matchIndex_4) {
+        int32_t arr[] = {3, 2, 2, 5, 3, 1, 5, 1, 2};
+        EXPECT_EQ(1, find(arr, sizeof(arr) / sizeof(int32_t), 2));
+    }
+    //matchIndex) 5****************************************************************************************
+    TEST(findTest, matchIndex_5) {
+        int arr[] = {3, 2, 2, -5, -5, -1, 5, -1, 2};
+        EXPECT_EQ(3, find(arr, sizeof(arr) / sizeof(int32_t), -5));
+    }
+
 }
